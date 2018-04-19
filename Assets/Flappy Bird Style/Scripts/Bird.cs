@@ -22,7 +22,7 @@ public class Bird : MonoBehaviour
 
 
     float HandWristRot;
-    float HandPalmPitch;
+    //float HandPalmPitch;
     float HandPalmYaw;
     float HandPalmRoll;
     
@@ -53,14 +53,14 @@ public class Bird : MonoBehaviour
             Hand firstHand = hands[0]; 
         }
 
-        HandPalmPitch = hands [0].PalmNormal.Pitch; 
+        //HandPalmPitch = hands [0].PalmNormal.Pitch; 
         HandPalmYaw = hands[0].PalmNormal.Yaw; 
         HandPalmRoll = hands[0].PalmNormal.Roll;
         
 
         HandWristRot = hands[0].WristPosition.Pitch;
 
-        Debug.Log("Pitch: " + HandPalmPitch);
+        //Debug.Log("Pitch: " + HandPalmPitch);
         Debug.Log("Yaw: " + HandPalmYaw);
         Debug.Log("Roll: " + HandPalmRoll);
 
