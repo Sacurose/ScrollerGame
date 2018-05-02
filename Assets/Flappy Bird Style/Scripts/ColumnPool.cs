@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ColumnPool : MonoBehaviour 
 {
@@ -33,12 +34,14 @@ public class ColumnPool : MonoBehaviour
 	}
 
 
-	//This spawns columns as long as the game is not over.
-	void Update()
+    /// <summary>
+    /// This spawns columns as long as the game is not over.
+    /// </summary>
+    void Update()
 	{
 		timeSinceLastSpawned += Time.deltaTime;
 
-		if (GameControl.instance.gameOver == false && timeSinceLastSpawned >= spawnRate) 
+		if (GameControl.Instance.GameOver == false && timeSinceLastSpawned >= spawnRate) 
 		{	
 			timeSinceLastSpawned = 0f;
 
