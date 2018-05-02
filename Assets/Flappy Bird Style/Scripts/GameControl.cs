@@ -53,7 +53,9 @@ public class GameControl : MonoBehaviour
 
     public GameObject Settings;
     
-    
+    /// <summary>
+    /// Sets current instance to this GameObject.
+    /// </summary>
 	public void Awake()
 	{        
 
@@ -67,12 +69,11 @@ public class GameControl : MonoBehaviour
             Instance = this;
         }
         else if (Instance != this)
-        {
+        {        
             Destroy(gameObject);
         }
 
-    
-        
+
     } 
 
     void Update()
@@ -122,10 +123,14 @@ public class GameControl : MonoBehaviour
     /// </summary>
     /// <param name="speed"></param>
     public void SetSpeed(float speed)
-    {      
-        Debug.Log(speed);       
+    {
+      Debug.Log(speed);
+       
     }
 
+    /// <summary>
+    /// Method that uses the quit button to return back to the main menu of the game.
+    /// </summary>
     public void QuitGame()
     {
 

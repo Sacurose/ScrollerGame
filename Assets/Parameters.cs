@@ -9,13 +9,13 @@ public class Parameters
     
 
     /// <summary>
-    /// Background scrolling speed value assigned via the UI slider.
+    /// Gets the scroll speed from the SetSpeed method in GameControl.
     /// </summary>    
     public float ScrollSpeeds
     {
         get
         {
-            float ScSpeedTempValue = -1.5f;        
+            float ScSpeedTempValue = 0f;        
             GameControl.Instance.SetSpeed(ScSpeedTempValue);  //Uses GameControl SetSpeed method on ScrollSpeed.
             return ScSpeedTempValue;                          
         } 
